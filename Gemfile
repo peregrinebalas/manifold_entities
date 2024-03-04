@@ -14,6 +14,9 @@ gem "neighbor"
 # Use postgres as the database for Active Record
 gem "pg"
 
+# Use postgis for geolocation
+gem 'activerecord-postgis-adapter'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
