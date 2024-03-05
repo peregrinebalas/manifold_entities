@@ -20,7 +20,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
+  # username: your_username
+  adapter: postgis
+  host: localhost
+  schema_search_path: public
+  # development:
+  #   <<: *default
   database: manifold_entities_development
 
   # The specified database role being used to connect to PostgreSQL.

@@ -3,6 +3,7 @@ class CreatePortals < ActiveRecord::Migration[7.1]
     create_table :portals do |t|
       t.boolean :public
       t.references :user, null: true, foreign_key: true
+      t.st_point :coordinates, geographic: true # longitude, latitude
       t.timestamps
     end
   end
