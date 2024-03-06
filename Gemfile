@@ -8,9 +8,6 @@ gem "rails", "~> 7.1.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use neighbor to support Active Record semantics with pgvector
-gem "neighbor"
-
 # Use postgres as the database for Active Record
 gem "pg"
 
