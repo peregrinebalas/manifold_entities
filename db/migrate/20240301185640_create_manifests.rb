@@ -5,7 +5,7 @@ class CreateManifests < ActiveRecord::Migration[7.1]
       t.string :stroke, null: false
       t.string :stroke_width
       t.string :fill
-      t.jsonb :polygon, null: false
+      t.jsonb :polygon, null: false, unique: true
 
       t.timestamps
     end
