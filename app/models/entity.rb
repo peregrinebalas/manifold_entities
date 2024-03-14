@@ -1,5 +1,5 @@
 class Entity < ApplicationRecord
-    has_one :outsider
+    belongs_to :outsider
     has_many :manifests, dependent: :delete_all
     has_many :contacts
     has_many :conversations, through: :messages

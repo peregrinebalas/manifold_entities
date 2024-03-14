@@ -11,8 +11,8 @@ class Manifest < ApplicationRecord
     private
 
     def valid_polygon?
-        coordinates.class == Array &&
-        coordinates.all? do |c|
+        polygon.class == Array &&
+        polygon.all? do |c|
             c.class == Array &&
             c.length == 2 &&
             c.all? do |i|

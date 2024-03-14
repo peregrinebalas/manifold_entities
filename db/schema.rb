@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_03_181244) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_14_013740) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
@@ -34,6 +34,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_03_181244) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "outsider_id"
+    t.index ["outsider_id"], name: "index_entities_on_outsider_id"
   end
 
   create_table "manifests", force: :cascade do |t|
