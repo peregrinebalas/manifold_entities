@@ -2,7 +2,8 @@ class Entity < ApplicationRecord
     belongs_to :outsider
     has_many :manifests, dependent: :delete_all
     has_many :contacts
-    has_many :conversations, through: :messages
+    has_many :messages
+    has_many :conversations#, through: :messages
 
     after_create :generate_manifest
 
